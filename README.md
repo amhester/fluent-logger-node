@@ -2,8 +2,6 @@
 
 fluent-logger implementation for Node.js inspired by [fluent-logger-python].
 
-[![Build Status](https://secure.travis-ci.org/fluent/fluent-logger-node.png?branch=master,develop)](http://travis-ci.org/fluent/fluent-logger-node)
-
 ## Install
 
     $ npm install fluent-logger
@@ -18,26 +16,11 @@ Fluent daemon should listen on TCP port.
 
 Singleton style
 
-    var logger = require('fluent-logger')
-    // The 2nd argument can be omitted. Here is a defualt value for options.
-    logger.configure('tag', {
-       host: 'localhost',
-       port: 24224,
-       timeout: 3.0,
-       reconnectInterval: 600000 // 10 minutes
-    });
-
-    // send an event record with 'tag.label'
-    logger.emit('label', {record: 'this is a log'});
+    
 
 Instance style
 
-    var logger = require('fluent-logger').createFluentSender('tag', {
-       host: 'localhost',
-       port: 24224,
-       timeout: 3.0,
-       reconnectInterval: 600000 // 10 minutes
-    });
+    
 
 
 The emit method has following signature
